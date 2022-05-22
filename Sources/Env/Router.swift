@@ -8,9 +8,10 @@ import SwiftUI
 
 protocol Routing: ObservableObject {
   func navigate<Source: View>(to: String, source: () -> Source) -> AnyView
+  func route(_ to: String) -> AnyView
 }
 
-open class Router: Routing {
+open class Router: ObservableObject {
   public init() {}
   open func navigate<Source>(to: String, source: () -> Source) -> AnyView where Source : View {
     AnyView(NavigationLink {
@@ -20,7 +21,7 @@ open class Router: Routing {
     })
   }
 
-  open func route(_ to: String) -> some View {
-    Text("\(to)")
+  open func route(_ to: String) -> AnyView {
+    AnyView(Text("\(to)"))
   }
 }
