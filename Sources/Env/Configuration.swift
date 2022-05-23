@@ -13,4 +13,8 @@ public struct Configuration {
   public var backgroundColor: Color {
     UI.color(token: .backgroundColor)
   }
+
+  public var host: String {
+    "https://demo.microfrontends.com"
+  }
 }
