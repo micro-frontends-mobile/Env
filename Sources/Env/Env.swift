@@ -10,18 +10,20 @@ import SwiftUI
 public class Env: ObservableObject {
   public private(set) static var shared: Env!
 
-  public static func initialize(router: Router = Router()) -> Env {
+  public static func initialize(router: Router = Router(), configuration: Configuration = Configuration()) -> Env {
     if shared != nil {
       return shared
     }
 
-    shared = Env(router: router)
+    shared = Env(router: router, configuration: configuration)
     return shared
   }
 
-  init(router: Router) {
+  init(router: Router, configuration: Configuration) {
     self.router = router
+    self.configuration = configuration
   }
 
   public let router: Router
+  public let configuration: Configuration
 }
