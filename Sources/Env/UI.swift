@@ -16,6 +16,11 @@ enum UI {
           light: UIColor(red: 243/255, green: 243/255, blue: 222/255, alpha: 1), // #f3f3de
           dark: UIColor(red: 134/255, green: 112/255, blue: 24/255, alpha: 1) // #867018
         ))
+      case .tabBarTintColor:
+        return Color(uiColor: duality(
+          light: UIColor(red: 241/255, green: 215/255, blue: 54/255, alpha: 1), // #f1d736
+          dark: UIColor(red: 197/255, green: 171/255, blue: 6/255, alpha: 1) // #c5ab06
+        ))
     }
   }
 
@@ -28,6 +33,7 @@ enum UI {
 
 enum Token {
   case backgroundColor
+  case tabBarTintColor
 }
 
 

@@ -14,6 +14,10 @@ public struct Configuration {
     UI.color(token: .backgroundColor)
   }
 
+  public var tabBarTintColor: Color {
+    UI.color(token: .tabBarTintColor)
+  }
+
   public var host: String {
     "https://demo.microfrontends.com"
   }
