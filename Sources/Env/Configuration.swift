@@ -19,6 +19,10 @@ public struct Configuration {
   }
 
   public var host: String {
+    "https://content.demo.microfrontends.com"
+  }
+
+  public var demoHost: String {
     "https://demo.microfrontends.com"
   }
 }
